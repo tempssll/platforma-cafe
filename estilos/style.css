@@ -21,9 +21,8 @@ body {
   align-items: center;
 }
 
-/* FONDO AL HACER CLICK EN EL MODAL */
 .modal-content {
-  background-color: green; /* Cambiado el color a azul claro */
+  background-color: #8a4200;
   padding: 20px;
   border-radius: 5px;
   text-align: center;
@@ -36,13 +35,12 @@ body {
   cursor: pointer;
   font-size: 50px;
   color: red;
-  /* Tamaño de la "x" */
 }
 
 /* Estilo para la imagen a pantalla completa */
 #imagenProductoModal {
   max-width: 100%;
-  max-height: 70vh; /* Cambiado el valor de altura */
+  max-height: 70vh;
 }
 
 /* Estilos para la disposición de los productos de sección inicio */
@@ -50,7 +48,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  background-color: #641e16; /* Cambiado el color de fondo de los productos */
+  background-color: #641e16;
 }
 
 .producto {
@@ -60,116 +58,96 @@ body {
   cursor: pointer;
   transition: background-color 0.3s;
   background-color: #fff;
-  /*Colordefondodecadaproducto*/
   border-radius: 8px;
-  overflow: hidden; /* Para evitar que el texto en .nombre-precio afecte el diseño */
+  overflow: hidden;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
 }
 
 .producto img {
   width: 100%;
-  height: 100%; /* Añadido el valor de altura */
-  object-fit: cover; /* Para mantener la relación de aspecto y cubrir completamente el contenedor */
-  border-radius: 8px; /* Esquinas redondeadas para la imagen */
-  border: 2px solid yellow; /* Borde verde */
-}
-
-/* Color del hover atras */
-.nombre-precio {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: green; /* Cambiado el color de fondo */
-  color: yellow;
-  text-align: center;
-  padding: 5px;
-  opacity: 0.8;
-}
-
-/* ... (resto de tus estilos) */
-
-/* Estilos para la disposición de los productos de sección inicio */
-.productos {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  background-color: #641e16; /* Cambiado el color de fondo de los productos */
-}
-
-.producto {
-  width: 30%;
-  margin: 10px;
-  position: relative;
-  cursor: pointer;
-  transition: background-color 0.3s;
-  background-color: #fff;
-  /*Colordefondodecadaproducto*/
+  height: 100%;
+  object-fit: cover;
   border-radius: 8px;
-  overflow: hidden; /* Para evitar que el texto en .nombre-precio afecte el diseño */
+  border: 1px solid yellow;
 }
-
-.producto img {
-  width: 100%;
-  height: 100%; /* Añadido el valor de altura */
-  object-fit: cover; /* Para mantener la relación de aspecto y cubrir completamente el contenedor */
-  border-radius: 8px; /* Esquinas redondeadas para la imagen */
-  border: 2px solid yellow; /* Borde verde */
-}
-
-/* Color del hover atras */
 .nombre-precio {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: green; /* Cambiado el color de fondo */
+  background-color: #1c0d02;
   color: yellow;
   text-align: center;
   padding: 5px;
   opacity: 0.8;
-}
-
-.producto:hover {
-  background-color: #4caf50; /* Cambiado el color de fondo al hacer hover */
-}
-
-.producto:hover {
-  background-color: #4caf50; /* Cambiado el color de fondo al hacer hover */
-  border: 2px solid gold; /* Añadido un borde blanco al hacer hover */
-}
-
-/* Color del hover atras */
-.nombre-precio {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: green; /* Cambiado el color de fondo */
-  color: #fff;
-  text-align: center;
-  padding: 5px;
-  opacity: 0.8;
-  border-bottom-left-radius: 8px; /* Esquinas redondeadas para la parte inferior izquierda */
-  border-bottom-right-radius: 8px; /* Esquinas redondeadas para la parte inferior derecha */
-}
-
-/* Cambiado el color de fondo del modal */
-#modal.modal {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 /* Estilos para dispositivos móviles */
+@media screen and (max-width: 768px) {
+  .nombre-precio {
+    /* Cambia la posición a estática en dispositivos móviles */
+    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
+    border-radius: 0; /* Elimina la esquina redondeada en dispositivos móviles */
+  }
+}
 
-/* ... (resto de tus estilos) */
+#modal.modal {
+  background-color: rgba(0, 0, 0, 0.7);
+}
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 768px) {
   .productos {
-    flex-direction: column; /* Cambia la dirección del contenedor a columna en dispositivos móviles */
+    flex-wrap: wrap; /* Permitir que los productos se envuelvan en dispositivos móviles */
   }
 
   .producto {
-    width: 100%; /* Ocupa todo el ancho en dispositivos móviles */
-    max-width: none; /* Asegura que el ancho no esté limitado en dispositivos móviles */
+    width: calc(
+      33.33% - 20px
+    ); /* 33.33% del ancho del contenedor con un margen de 10px a cada lado */
+    margin: 10px;
   }
+}
+
+/* Contacto */
+.contacto-section {
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  background-color: #f2f2f2;
+}
+
+.contacto-section h2 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.contacto-section p {
+  color: #555;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.armenia {
+  font-weight: bold;
+  color: #e44d26; /* Color naranja, puedes cambiarlo según tus preferencias */
+}
+
+/* Añadir algunos estilos adicionales si es necesario */
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: green;
+  font-size: 1.2em; /* Puedes ajustar el tamaño de fuente según tus preferencias */
+  padding: 10px 20px; /* Puedes ajustar el relleno (padding) según tus preferencias */
+  border: 1px solid yellow;
 }
