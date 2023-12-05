@@ -4,7 +4,7 @@ body {
 
 .cafe {
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   background-color: gold;
   color: white;
 }
@@ -71,7 +71,7 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: 8px;
-  border: 1px solid yellow;
+  border: 1px solid green;
 }
 .nombre-precio {
   position: absolute;
@@ -110,7 +110,8 @@ body {
     width: calc(
       33.33% - 20px
     ); /* 33.33% del ancho del contenedor con un margen de 10px a cada lado */
-    margin: 10px;
+    margin: 3px;
+    padding: 4px;
   }
 }
 
